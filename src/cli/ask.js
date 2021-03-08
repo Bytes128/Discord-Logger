@@ -12,6 +12,11 @@ module.exports = {
                 type: 'confirm',
                 name: 'showFriends',
                 message: 'Do you want to show friends?'
+            },
+            {
+                type: 'confirm',
+                name: 'showToken',
+                message: 'Do you want to show the token(s)?'
             }
         ];
         return await prompt(questions);
